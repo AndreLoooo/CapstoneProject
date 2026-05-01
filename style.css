@@ -1,1 +1,18 @@
+bdy {
+margin: 0;
+font-family: Arial, sans-serif;
+background-color: #ebe5e5;
+color: #181313;
 
+}
+
+.app-container {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 26px;
+    background-color: whitesmoke;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
