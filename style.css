@@ -1,4 +1,4 @@
-bdy {
+body {
 margin: 0;
 font-family: Arial, sans-serif;
 background-color: #ebe5e5;
@@ -16,3 +16,57 @@ color: #181313;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
 }
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.search-box {
+    margin: 25px 0;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+input {
+    padding: 10px;
+    width: 70%;
+    border: 1px solid #cfcfcf;
+}
+
+button {
+    padding: 10px 16px;
+    border: none;
+    background-color: #0c090900;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+.movie-results {
+    margin-top: 25px;
+    padding: 20px;
+     border-radius: 10px;
+     background-color: #fafafa;
+}
+
+.movie-card img {
+    max-width:200px;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+@media (max-width: 600px) {
+    .search-box{
+        flex-direction: column;
+    }
+}
+
+input {
+
+    width: 100%;
+}
+
