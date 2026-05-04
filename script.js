@@ -18,7 +18,7 @@ function getMovies() {
     }
 
     movieResult.innerHTML = "<p>Give It a Sec...</p>";
-
+//API key and url
     const apiKey = "13737c9f";
     const url = `https://www.omdbapi.com/?t=${movieName}&apikey=${apiKey}`;
 
@@ -32,7 +32,7 @@ function getMovies() {
 
         //Poster Fallback
         const poster = data.Poster !== "N/A" ? data.Poster : "https://via.placeholder.com/200/300?text=No+Poster";
-
+//Movie Info also added more info
         movieResult.innerHTML = `
         <div class="movie-card">
         <h2>${data.Title}</h2>
@@ -40,7 +40,7 @@ function getMovies() {
         <p><strong>Year:</strong> ${data.Year}</p>
         <p><strong>Genre:</strong> ${data.Genre}</p>
         <p><strong>Plot:</strong> ${data.Plot}</p>
-        <p><strong>Director:</strong> ${data.Director}</p>]
+        <p><strong>Director:</strong> ${data.Director}</p>
         <p><strong>Actors:</strong> ${data.Actors}</p>
         <p><strong>Runtime:</strong> ${data.Runtime}</p>
         </div>
