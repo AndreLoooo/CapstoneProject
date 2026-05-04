@@ -3,6 +3,7 @@ const searchBtn = document.getElementById('searchBtn');
 const movieResult = document.getElementById('movieResult');
 searchBtn.addEventListener("click", getMovies);
 
+//Enter key support
 movieInput.addEventListener("keypress", function(e) {
     if (e.key === "Enter") {
         getMovies();
@@ -29,18 +30,24 @@ function getMovies() {
             return;
         }
 
+        //Poster Fallback
+        const poster = data.Poster !== "N/A" ? data.Poster : "https://via.placeholder.com/200/300?text=No+Poster";
+
         movieResult.innerHTML = `
         <div class="movie-card">
         <h2>${data.Title}</h2>
-        <img src="${data.Poster}" alt="${data.Title} Poster">
+        <img src="${poster}" alt="${data.Title} Poster">
         <p><strong>Year:</strong> ${data.Year}</p>
         <p><strong>Genre:</strong> ${data.Genre}</p>
         <p><strong>Plot:</strong> ${data.Plot}</p>
+        <p><strong>Director:</strong> ${data.Director}</p>]
+        <p><strong>Actors:</strong> ${data.Actors}</p>
+        <p><strong>Runtime:</strong> ${data.Runtime}</p>
         </div>
         `;
     })
     .catch(() => {
-        movieResult.innerHTML = "<p>Error Fetching movie infromation.</p>";
+        movieResult.innerHTML = "<p>Error Fetching movie information.</p>";
     });
 }
 
